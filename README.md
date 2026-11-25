@@ -7,8 +7,18 @@ Viene casi vacío a propósito: la aplicación la generas tú, con ayuda de la I
 ## Requisitos
 
 - Node.js **22.20.0** o superior
-- Un agente de IA: OpenCode, Codex o Claude Code
+- Un asistente de código: OpenCode, Claude Code, Codex o GitHub Copilot
 - GitHub CLI (`gh`) y una cuenta de GitHub
+
+## Instrucciones
+
+Los tickets de cada reto están en [`instrucciones/`](instrucciones/):
+
+| Reto | Carpeta | Tema |
+| --- | --- | --- |
+| #1 | [`tarea-1/`](instrucciones/tarea-1/) | Vibe coding: generar el selector de ganadores |
+| #2 | [`tarea-2/`](instrucciones/tarea-2/) | Guard rails y Spec Driven Development |
+| #3 | [`tarea-3/`](instrucciones/tarea-3/) | Backend e historial _(opcional)_ |
 
 ## Primeros pasos
 
@@ -24,7 +34,8 @@ npx openspec --version
 | `AGENTS.md` | Las reglas del proyecto para la IA. **Está vacío: lo llenas tú.** |
 | `CLAUDE.md` | Hace que Claude Code lea `AGENTS.md`. |
 | `openspec/` | Especificaciones del proyecto con [OpenSpec](https://github.com/Fission-AI/OpenSpec). |
-| `.agents/skills/`, `.claude/skills/` | Comandos de OpenSpec para OpenCode, Codex y Claude Code. |
+| `.agents/skills/`, `.claude/skills/` | Comandos de OpenSpec para OpenCode, Claude Code, Codex y GitHub Copilot. |
+| `instrucciones/` | Los tickets de cada reto. |
 
 ## Flujo con OpenSpec
 

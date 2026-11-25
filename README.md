@@ -18,6 +18,7 @@ Los tickets de cada reto están en [`instrucciones/`](instrucciones/):
 | --- | --- | --- |
 | #1 | [`tarea-1/`](instrucciones/tarea-1/) | Vibe coding: generar el selector de ganadores |
 | #2 | [`tarea-2/`](instrucciones/tarea-2/) | Guard rails y Spec Driven Development |
+| #3 | [`tarea-3-optional/`](instrucciones/tarea-3-optional/) | Backend e historial _(opcional)_ |
 
 ## Primeros pasos
 

@@ -38,7 +38,7 @@ Primero crea el cambio con OpenSpec (`/openspec-propose`) con el comportamiento 
 - El cambio se propuso, implementó y archivó con OpenSpec.
 - La pantalla de historial cumple las reglas R1 a R4.
 - La pantalla usa los endpoints `GET /api/sorteos` y `GET /api/sorteos/{id}` del Ticket #2.
-- La pantalla usa el **color base** elegido por el usuario.
+- La pantalla usa el **color base** de la aplicación.
 - Existen pruebas automáticas para la lista, el detalle y los tres estados, sin depender de un backend real.
 - Todo lo que funcionaba antes sigue funcionando y el CI pasa.
 

@@ -19,14 +19,15 @@ Puedes utilizar cualquier framework o herramienta de inteligencia artificial que
 - La aplicación permite iniciar el sorteo mediante un botón o acción claramente identificable.
 - Al ejecutar el sorteo, se selecciona aleatoriamente a un único participante.
 - El ganador se muestra de manera clara y destacada en la interfaz.
-- La aplicación le pide al usuario un color base para la interfaz gráfica (por ejemplo: rojo, azul, verde, etc.) y lo aplica a la interfaz.
+- Antes de generar la aplicación, el asistente de IA le pregunta al desarrollador qué color base usar para la interfaz gráfica (por ejemplo: rojo, azul, verde, etc.) y lo aplica a la interfaz. El usuario final no elige el color.
 - La aplicación puede ejecutarse localmente siguiendo las instrucciones del proyecto.
 
 ## Ejemplo de uso
 
-1. El usuario abre la aplicación.
-2. Elige un color base para la interfaz, por ejemplo **azul**.
-3. Ingresa los siguientes participantes:
+Al pedirle la aplicación, el asistente de IA pregunta qué color base usar y el desarrollador responde, por ejemplo, **azul**. Luego:
+
+1. El usuario abre la aplicación, que ya usa el color **azul**.
+2. Ingresa los siguientes participantes:
 
    - Ana
    - Pedro
@@ -34,8 +35,8 @@ Puedes utilizar cualquier framework o herramienta de inteligencia artificial que
    - Luis
    - Sofía
 
-4. Presiona el botón **"Sortear ganador"**.
-5. La aplicación muestra el resultado:
+3. Presiona el botón **"Sortear ganador"**.
+4. La aplicación muestra el resultado:
 
    **¡Tenemos un ganador!**
 
@@ -49,6 +50,6 @@ El resultado puede ser diferente en cada ejecución.
 - Puedes utilizar cualquier framework, biblioteca o herramienta para desarrollar la interfaz.
 - No es necesario guardar los participantes ni los resultados entre sesiones.
 - No es necesario implementar múltiples ganadores.
-- Puedes tomar tus propias decisiones sobre el diseño visual y la experiencia de usuario, siempre que se respete el color base elegido por el usuario.
+- Puedes tomar tus propias decisiones sobre el diseño visual y la experiencia de usuario, siempre que se respete el color base que elegiste cuando el asistente te lo preguntó.
 
 ¡El objetivo es conseguir una primera versión funcional utilizando desarrollo asistido por IA!

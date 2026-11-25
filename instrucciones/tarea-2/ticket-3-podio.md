@@ -23,7 +23,7 @@ En los eventos de la comunidad solemos entregar más de un premio. Queremos que 
   - 🥇 1.er lugar en el centro y más alto;
   - 🥈 2.º lugar a la izquierda;
   - 🥉 3.er lugar a la derecha.
-- El podio usa el **color base** elegido por el usuario.
+- El podio usa el **color base** de la aplicación.
 
 ### R3 — Resultados vigentes
 

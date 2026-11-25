@@ -12,7 +12,7 @@ Como en los tickets anteriores, primero crea un cambio con OpenSpec (`/openspec-
 
 - Al presionar **"Sortear ganador"**, se muestra una cuenta regresiva de **3 a 1**, con **un segundo** entre cada número.
 - Después del **1**, se muestran los ganadores (uno o un podio, según el Ticket #3).
-- La cuenta regresiva se muestra de forma grande y visible, usando el **color base** elegido por el usuario.
+- La cuenta regresiva se muestra de forma grande y visible, usando el **color base** de la aplicación.
 
 ### R2 — Durante la cuenta regresiva
 

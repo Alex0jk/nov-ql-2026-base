@@ -14,7 +14,7 @@ Este ticket se construye sobre el **Ticket #1**. Crea un cambio con OpenSpec (`/
   - que el sorteo elige a **un único** ganador;
   - que el ganador **siempre** es uno de los participantes de la lista;
   - que no se puede sortear sin participantes;
-  - que el color base elegido se aplica a la interfaz.
+  - que el color base definido se aplica a la interfaz.
 - Las pruebas se ejecutan localmente con un solo comando (por ejemplo, `npm test`).
 - El proyecto tiene un linter y/o formatter configurado y se ejecuta con un solo comando.
 - Existe un workflow de **GitHub Actions** que ejecuta el linter y las pruebas:

@@ -15,7 +15,7 @@ Este ticket se construye sobre el **Ticket #0**: la IA debe seguir las reglas de
 - Los comandos de OpenSpec funcionan en el agente de IA que usa el equipo (OpenCode, Claude Code, Codex o GitHub Copilot).
 - Existe una especificación en `openspec/specs/` que describe el comportamiento **actual** de la aplicación:
   - agregar participantes;
-  - elegir un color base para la interfaz;
+  - aplicar el color base definido para la interfaz;
   - sortear y mostrar a un único ganador.
 - La especificación se creó siguiendo el flujo de OpenSpec: propuesta → implementación → archivo.
 - `AGENTS.md` indica que todo cambio nuevo se especifica primero con OpenSpec.

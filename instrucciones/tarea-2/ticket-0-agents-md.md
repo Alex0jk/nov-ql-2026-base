@@ -6,7 +6,7 @@ En el Reto #1 la IA tomó todas las decisiones: estructura, estilo, pruebas (o l
 
 Para eso vamos a completar el archivo `AGENTS.md` que viene **vacío** en el proyecto base. Es un archivo de instrucciones que los agentes de IA leen automáticamente antes de trabajar en el código. Es el primer **guard rail** del proyecto.
 
-Este ticket se construye **sobre la aplicación del Reto #1** (`instrucciones/tarea-1/`), no desde cero.
+Este ticket se construye **sobre la aplicación del Reto #1** (`instrucciones/tarea-1/`), no desde cero. Una vez escritas las reglas, la IA las aplica al código que ya existe.
 
 **El contenido lo decide el equipo.** No le pidas a la IA que invente las reglas: discútanlas y escríbanlas ustedes. La IA puede ayudarles a redactarlas o a revisar si son claras.
 
@@ -21,7 +21,9 @@ Este ticket se construye **sobre la aplicación del Reto #1** (`instrucciones/ta
   - **Lo que la IA no debe hacer.**
 - Cada regla es **concreta y verificable** (ver ejemplos abajo).
 - El agente que usa el equipo lee el archivo (ver *Consideraciones*).
-- Comprueban que la IA respeta las reglas: le piden un cambio pequeño y revisan el resultado.
+- El código actual cumple las reglas de `AGENTS.md`: la IA lo refactoriza para aplicarlas (ver *Flujo de trabajo*).
+- El refactor **no cambia el comportamiento**: la aplicación funciona igual que al terminar el Reto #1.
+- El equipo revisa el resultado y confirma que cada regla se cumple.
 
 ## Ejemplos de reglas
 
@@ -57,10 +59,24 @@ Selector de ganadores para sorteos. Solo frontend, con Vite + TypeScript.
 - El generador aleatorio se inyecta; nunca se llama a `Math.random()` directamente.
 ```
 
+## Flujo de trabajo
+
+1. **Escribir las reglas:** el equipo completa `AGENTS.md`.
+2. **Revisar el código actual:** pídanle a la IA que compare el código con `AGENTS.md` y liste qué reglas no se cumplen. Por ejemplo:
+
+   > Lee `AGENTS.md` y revisa el código del proyecto. Lista qué reglas no se cumplen y dónde. No cambies nada todavía.
+
+3. **Aplicar las reglas:** pídanle que refactorice el código para cumplirlas, sin cambiar el comportamiento:
+
+   > Refactoriza el código para que cumpla todas las reglas de `AGENTS.md`. No cambies el comportamiento de la aplicación.
+
+4. **Revisar el resultado:** comprueben que la aplicación funciona igual y que cada regla se cumple. Si la IA ignoró una regla, aclárenla en `AGENTS.md` y repitan el paso 3.
+
 ## Consideraciones
 
 - **OpenCode**, **Codex** y **GitHub Copilot** leen `AGENTS.md` automáticamente.
 - **Claude Code** lee `CLAUDE.md`: el proyecto base ya incluye uno con la línea `@AGENTS.md`, así que usa las mismas reglas.
+- Si una regla depende de algo que llega en un ticket posterior (por ejemplo, las pruebas automáticas del Ticket #2), déjenla escrita: se aplicará en ese ticket.
 - Mantén el archivo corto: reglas claras y pocas son mejores que muchas reglas genéricas.
 - `AGENTS.md` es un documento vivo: actualízalo cuando la IA cometa un error que una regla habría evitado.
 

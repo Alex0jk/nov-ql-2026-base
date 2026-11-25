@@ -1,0 +1,54 @@
+:root {
+  --azul-50: #eff6ff;
+  --azul-100: #dbeafe;
+  --azul-500: #3b82f6;
+  --azul-600: #2563eb;
+  --azul-700: #1d4ed8;
+  --azul-900: #1e3a8a;
+  --texto: #0f172a;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 16px;
+  font-family: system-ui, sans-serif; color: var(--texto);
+  background: linear-gradient(135deg, var(--azul-100), var(--azul-50));
+}
+.card {
+  width: 100%; max-width: 480px; background: #fff; padding: 28px;
+  border-radius: 16px; box-shadow: 0 10px 30px rgb(30 58 138 / .15);
+}
+h1 { margin: 0 0 20px; color: var(--azul-700); }
+h2 { font-size: 1rem; color: var(--azul-900); }
+label { display: block; margin-bottom: 6px; font-weight: 600; }
+.fila { display: flex; gap: 8px; }
+input {
+  flex: 1; padding: 10px 12px; font-size: 1rem;
+  border: 2px solid var(--azul-100); border-radius: 8px;
+}
+input:focus { outline: none; border-color: var(--azul-500); }
+button {
+  padding: 10px 16px; font-size: 1rem; font-weight: 600;
+  border: 0; border-radius: 8px; cursor: pointer;
+}
+button:focus-visible { outline: 3px solid var(--azul-500); outline-offset: 2px; }
+.primario { width: 100%; margin-top: 12px; padding: 14px; background: var(--azul-600); color: #fff; }
+.primario:hover:not(:disabled) { background: var(--azul-700); }
+.primario:disabled { background: #94a3b8; cursor: not-allowed; }
+.secundario { background: var(--azul-100); color: var(--azul-900); }
+.secundario:hover { background: var(--azul-500); color: #fff; }
+.lista { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.lista li {
+  display: flex; align-items: center; gap: 6px; padding: 4px 6px 4px 12px;
+  background: var(--azul-50); border: 1px solid var(--azul-100); border-radius: 999px;
+}
+.lista button { padding: 0 8px; background: transparent; color: var(--azul-700); font-size: 1.1rem; }
+.vacio { color: #64748b; margin: 0; }
+.error { color: #b91c1c; margin: 6px 0 0; }
+.resultado {
+  margin-top: 20px; padding: 20px; text-align: center; border-radius: 12px;
+  background: var(--azul-600); color: #fff; animation: pop .4s ease;
+}
+.resultado .titulo { margin: 0; font-size: 1.1rem; opacity: .9; }
+.ganador { margin: 8px 0 0; font-size: 2.5rem; font-weight: 800; word-break: break-word; }
+@keyframes pop { from { transform: scale(.85); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .resultado { animation: none; } }

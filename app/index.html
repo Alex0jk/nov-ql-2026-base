@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Selector de ganadores</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Selector de ganadores</h1>
+
+    <form id="form-participante" autocomplete="off">
+      <label for="nombre">Nombre del participante</label>
+      <div class="fila">
+        <input id="nombre" type="text" placeholder="Ej. Ana" maxlength="50">
+        <button type="submit" class="secundario">Agregar</button>
+      </div>
+      <p id="error" class="error" role="alert" hidden></p>
+    </form>
+
+    <section>
+      <h2>Participantes (<span id="contador">0</span>)</h2>
+      <ul id="lista" class="lista"></ul>
+      <p id="vacio" class="vacio">Aún no hay participantes.</p>
+    </section>
+
+    <button id="sortear" type="button" class="primario" disabled>Sortear ganador</button>
+
+    <section id="resultado" class="resultado" aria-live="polite" hidden>
+      <p class="titulo">¡Tenemos un ganador!</p>
+      <p id="ganador" class="ganador"></p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

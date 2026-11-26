@@ -27,6 +27,38 @@ npm install
 npx openspec --version
 ```
 
+## Ejecutar la aplicación
+
+```sh
+npm install
+npm run dev        # abre http://localhost:8001
+```
+
+Si el puerto 8001 está ocupado: `PORT=8002 npm run dev`.
+La app debe abrirse por HTTP; abrir `src/index.html` con doble clic no funciona porque usa ES modules.
+
+## Pruebas, lint y CI
+
+| Comando | Qué hace |
+| --- | --- |
+| `npm test` | Ejecuta todas las pruebas (`node:test`, con `jsdom` para la interfaz). |
+| `npm run coverage` | Ejecuta las pruebas y falla si `src/sorteo/` baja de 90% de líneas o 80% de ramas. |
+| `npm run lint` | Revisa el código con ESLint (incluye los límites de 150 líneas por archivo y 25 por función). |
+
+El CI (`.github/workflows/ci.yml`) ejecuta `npm ci`, `npm run lint`, `npm test` y `npm run coverage`, cada uno en su propio paso, en cada pull request hacia `main` y en cada push a ramas distintas de `main`. Si falla el lint o una prueba, el resultado queda en rojo y el registro indica cuál falló.
+
+## Despliegue
+
+La aplicación se publica en GitHub Pages: <https://alex0jk.github.io/nov-ql-2026-base/>
+
+> Supuesto: la URL se deriva del remote `origin` (`Alex0jk/nov-ql-2026-base`); si el repositorio cambia de dueño o nombre, hay que actualizarla.
+
+Cada push a `main` (por ejemplo, al fusionar un pull request) ejecuta `.github/workflows/despliegue.yml`: primero reutiliza el CI y, solo si pasa, sube la carpeta `src/` a Pages sin paso de build. Los pull requests y las demás ramas nunca despliegan. Si la verificación o el despliegue fallan, sigue publicada la versión anterior.
+
+Requisito único: en Settings → Pages, elegir como origen "GitHub Actions".
+
+Para revisar las ejecuciones: `gh run list` y `gh run watch`.
+
 ## ¿Qué incluye?
 
 | Archivo / carpeta | Para qué sirve |

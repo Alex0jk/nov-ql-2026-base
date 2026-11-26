@@ -7,14 +7,14 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="card">
+  <main class="tarjeta">
     <h1>Selector de ganadores</h1>
 
     <form id="form-participante" autocomplete="off">
       <label for="nombre">Nombre del participante</label>
       <div class="fila">
         <input id="nombre" type="text" placeholder="Ej. Ana" maxlength="50">
-        <button type="submit" class="secundario">Agregar</button>
+        <button id="agregar" type="submit" class="secundario">Agregar</button>
       </div>
       <p id="error" class="error" role="alert" hidden></p>
     </form>
@@ -25,13 +25,23 @@
       <p id="vacio" class="vacio">Aún no hay participantes.</p>
     </section>
 
+    <fieldset id="cantidad" class="cantidad">
+      <legend>Cantidad de ganadores</legend>
+      <div class="opciones">
+        <label class="opcion"><input type="radio" name="cantidad" value="1" checked> 1</label>
+        <label class="opcion"><input type="radio" name="cantidad" value="2"> 2</label>
+        <label class="opcion"><input type="radio" name="cantidad" value="3"> 3</label>
+      </div>
+    </fieldset>
+
+    <p id="aviso" class="aviso" role="status" hidden></p>
+
     <button id="sortear" type="button" class="primario" disabled>Sortear ganador</button>
 
-    <section id="resultado" class="resultado" aria-live="polite" hidden>
-      <p class="titulo">¡Tenemos un ganador!</p>
-      <p id="ganador" class="ganador"></p>
-    </section>
+    <p id="cuenta" class="cuenta" role="status" aria-live="assertive" hidden></p>
+
+    <section id="resultado" class="resultado" aria-live="polite" hidden></section>
   </main>
-  <script src="app.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
 </html>
